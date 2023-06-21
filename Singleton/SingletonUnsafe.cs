@@ -4,13 +4,13 @@
 // check SingletonSafe for thread safe version
 internal sealed class SingletonUnsafe
 {
-    private static int i = 0;
+    //private static int i = 0;
     private static SingletonUnsafe Instance = null;
 
     private SingletonUnsafe()
     {
-        ++i;
-        Console.WriteLine("Instance created: " + i.ToString());
+        //++i;
+        //Console.WriteLine("Instance created: " + i.ToString());
     }
 
     public static SingletonUnsafe GetInstance()

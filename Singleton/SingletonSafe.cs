@@ -1,15 +1,15 @@
 ﻿namespace Singleton;
 
 // this implementation is thread safe.
-internal class SingletonSafe
+internal sealed class SingletonSafe
 {
-    private static int i = 0;
+    //private static int i = 0;
     private static Lazy<SingletonSafe> Instance = new Lazy<SingletonSafe>(() => new SingletonSafe());
 
     private SingletonSafe()
     {
-        ++i;
-        Console.WriteLine("Instance created: " + i.ToString());
+        //++i;
+        //Console.WriteLine("Instance created: " + i.ToString());
     }
 
     public static SingletonSafe GetInstance()
